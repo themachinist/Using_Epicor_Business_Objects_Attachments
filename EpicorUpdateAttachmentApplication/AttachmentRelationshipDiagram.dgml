@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="52eefd2f-246b-4409-8192-f22745fe5f101" Category="Comment" Bounds="-375.678664873781,-129.150007228851,217.603333333333,41.92" Label="Each Attachment meta-data has a file reference attached to it" UseManualLocation="True" />
+    <Node Id="EachPartHasMultipleRevisionLevels" Category="Comment" Bounds="-260.05356048584,-298.150007228851,213.373333333333,25.96" Label="Each Part has multiple revision levels" UseManualLocation="True" />
+    <Node Id="Part" Bounds="-4.60722451383867,-255.280003051758,50,25.96" UseManualLocation="True" />
+    <Node Id="PartRev" Bounds="-58.718332417806,-175.820048703003,50,25.96" Label="Rev" UseManualLocation="True" />
+    <Node Id="PartRev1" Bounds="49.7872848510742,-175.159999389648,50,25.96" Label="Rev" UseManualLocation="True" />
+    <Node Id="PartRevAttachment" Bounds="-103.131998207114,-101.859947662354,81.7833333333333,25.96" Label="Attachment" UseManualLocation="True" />
+    <Node Id="PartRevAttachment1" Bounds="74.7967690531412,-92.1599998474121,81.7833333333333,25.96" Label="Attachment" UseManualLocation="True" />
+    <Node Id="XPartRef" Bounds="-103,-28,62.2366666666667,25.96" Label="XFileRef" UseManualLocation="True" />
+    <Node Id="XPartRef1" Bounds="88.8015111541748,-25.1599998474121,62.2366666666667,25.96" Label="XFileRef" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="52eefd2f-246b-4409-8192-f22745fe5f101" Target="XPartRef" Bounds="-223.0098495723,-87.2300100708008,115.84172357987,55.3499141306529" />
+    <Link Source="EachPartHasMultipleRevisionLevels" Target="PartRev" Bounds="-140.67140641538,-272.189998168945,87.9645316562806,89.935863756733" />
+    <Link Source="PartRev" Target="Part" Bounds="-24.8791378661467,-221.881075822146,31.3669013833098,46.0610271191434" />
+    <Link Source="PartRev1" Target="Part" Bounds="34.260308698741,-221.873903511076,31.7146835372074,46.7139041214277" />
+    <Link Source="PartRevAttachment" Target="PartRev" Bounds="-57.2347198200362,-141.462825331266,15.2724675363274,39.6028776689126" />
+    <Link Source="PartRevAttachment1" Target="PartRev1" Bounds="85.1618914401127,-141.126990798215,24.1301978293588,48.9669904930395" />
+    <Link Source="XPartRef" Target="PartRevAttachment" Bounds="-70.1873172378949,-66.9756591202658,5.08770155300232,38.9756586625021" />
+    <Link Source="XPartRef1" Target="PartRevAttachment1" Bounds="117.075462402129,-57.2178954713946,2.02462699060204,32.0578956430559" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>
