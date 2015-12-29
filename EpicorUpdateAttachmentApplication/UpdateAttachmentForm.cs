@@ -94,6 +94,12 @@ namespace EpicorUpdateAttachmentApplication
 
 		private void buttonUpdate_Click(object sender, EventArgs e)
 		{
+			if (comboBox1.SelectedValue == null)
+			{
+				MessageBoxEx.Show(this, "Part Number could not be found", "Search");
+				return;
+			}
+
 			listBoxStatusUpdates.Items.Add("initializing...");
 
 			string partNumber = textBoxPartNumber.Text.ToString();
